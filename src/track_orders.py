@@ -1,4 +1,5 @@
 from src.analyze_log import mostRequestedByMaria, orderNotPlaced
+from collections import Counter
 
 
 class TrackOrders:
@@ -26,7 +27,8 @@ class TrackOrders:
         return orderNotPlaced(self.ordersComplete, 'day', customer)
 
     def get_busiest_day(self):
-        pass
+        maxDay = set([line['day'] for line in self.ordersComplete])
+        return Counter(maxDay).most_common()[0][0]
 
     def get_least_busy_day(self):
         pass
