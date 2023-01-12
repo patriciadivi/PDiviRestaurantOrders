@@ -1,4 +1,4 @@
-from src.analyze_log import mostRequestedByMaria
+from src.analyze_log import mostRequestedByMaria, orderNotPlaced
 
 
 class TrackOrders:
@@ -20,7 +20,7 @@ class TrackOrders:
         return mostRequestedByMaria(self.ordersComplete, customer)
 
     def get_never_ordered_per_customer(self, customer):
-        pass
+        return orderNotPlaced(self.ordersComplete, 'requests', customer)
 
     def get_days_never_visited_per_customer(self, customer):
         pass
