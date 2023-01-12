@@ -31,4 +31,5 @@ class TrackOrders:
         return Counter(maxDay).most_common()[0][0]
 
     def get_least_busy_day(self):
-        pass
+        minDay = [line['day'] for line in self.ordersComplete]
+        return Counter(minDay).most_common()[-1][0]
