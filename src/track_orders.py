@@ -1,3 +1,6 @@
+from src.analyze_log import mostRequestedByMaria
+
+
 class TrackOrders:
     # aqui deve expor a quantidade de estoque
     def __init__(self):
@@ -14,7 +17,7 @@ class TrackOrders:
         self.orderQuantity.append('successfully created')
 
     def get_most_ordered_dish_per_customer(self, customer):
-        pass
+        return mostRequestedByMaria(self.ordersComplete, customer)
 
     def get_never_ordered_per_customer(self, customer):
         pass
