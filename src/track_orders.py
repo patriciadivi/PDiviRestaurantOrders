@@ -8,7 +8,9 @@ class TrackOrders:
         return len(self.orderQuantity)
 
     def add_new_order(self, customer, order, day):
-        self.ordersComplete.append({"client": customer, "requests": order, "day": day})
+        self.ordersComplete.append(
+            {"client": customer, "requests": order, "day": day}
+        )
         self.orderQuantity.append('successfully created')
 
     def get_most_ordered_dish_per_customer(self, customer):
