@@ -23,7 +23,7 @@ class TrackOrders:
         return orderNotPlaced(self.ordersComplete, 'requests', customer)
 
     def get_days_never_visited_per_customer(self, customer):
-        pass
+        return orderNotPlaced(self.ordersComplete, 'day', customer)
 
     def get_busiest_day(self):
         pass
